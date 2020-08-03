@@ -1,0 +1,22 @@
+<div class="itinerary">
+    <div class="error-wrapper">
+        <div class="alert alert-danger" role="alert" *ngIf="hasError">
+            Algo parece estar errado. Tente novamente!
+        </div>
+        <div class="spinner-border text-danger spinner" role="status" *ngIf="isLoading">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <img class="img-search " src="../../assets/serverDown.png" *ngIf="hasError" />
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of itinerary  | paginate: {itemsPerPage: contador, currentPage: p}">
+            Latitude: {{ item.lat }},  Longitude: {{item.lng}}
+            <a target="_blank" href="https://www.google.com/maps/?q={{item.lat}},{{item.lng}}">
+                <fa-icon [icon]="faMapMarkerAlt" style="color:#d92027;"></fa-icon>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="pagination">
+    <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel=""></pagination-controls>
+</div>

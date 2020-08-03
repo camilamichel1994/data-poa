@@ -1,0 +1,16 @@
+.navbar-component{
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px){
+    .navbar-component{
+        display: flex;
+        flex-grow: 1;
+    }
+}
+
+.navbar-wrapper{
+    display: flex;
+    justify-content: flex-end;
+}

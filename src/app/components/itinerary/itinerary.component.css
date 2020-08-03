@@ -1,0 +1,23 @@
+.itinerary{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.img-search{
+    margin-top: 20px;
+    width: 400px;
+    height: max-content;
+    display: flex;
+    align-self: center;
+}
+
+.error-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.spinner{
+    display: flex;
+    align-self: center;
+}
